@@ -1,6 +1,6 @@
-`from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
-from database import Base
+from database import Base,engine,sessionmaker
 
 
 class Job(Base):
@@ -11,4 +11,3 @@ class Job(Base):
     salary = Column(Integer)
     company_id = Column(Integer, ForeignKey("companies.id"))
     company = relationship("Company", back_populates="jobs")
-    `
