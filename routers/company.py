@@ -1,5 +1,4 @@
 from fastapi import APIRouter
-from schemas import company
 from schemas.company import CompanyCreate, CompanyUpdate
 
 router = APIRouter(prefix="/company", tags=["company"])

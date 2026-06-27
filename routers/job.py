@@ -1,5 +1,4 @@
 from fastapi import APIRouter
-from schemas import job
 from schemas.job import JobCreate, JobUpdate
 
 router = APIRouter(prefix="/job", tags=["job"])
