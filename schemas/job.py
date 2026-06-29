@@ -5,6 +5,7 @@ class JobBase(BaseModel):
     title: str
     salary: int
     description: Optional[str] = None
+    location: Optional[str] = None
     company_id: int
 
 class JobCreate(JobBase):
@@ -14,6 +15,7 @@ class JobUpdate(JobBase):
     title: Optional[str] = None
     salary: Optional[int] = None
     description: Optional[str] = None
+    location: Optional[str] = None
     company_id: Optional[int] = None
 
 class JobResponse(JobBase):

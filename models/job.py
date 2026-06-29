@@ -8,5 +8,6 @@ class Job(Base):
     title = Column(String, nullable=False)
     description = Column(String)
     salary = Column(Integer)
+    location = Column(String)
     company_id = Column(Integer, ForeignKey("companies.id"))
     company = relationship("Company", back_populates="jobs")
