@@ -16,7 +16,8 @@ class CompanyUpdate(BaseModel):
    phone: Optional [str] = None
 
 class CompanyResponse(CompanyBase):
-    id: int
+    id:int
     jobs: list[JobResponse]
 
-    model_config = {"from_attributes": True}
+    class Config:
+        from_attributes = True

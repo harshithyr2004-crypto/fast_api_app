@@ -1,7 +1,6 @@
-from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy import Column, Integer, String, Enum, ForeignKey
+from database import Base, engine, SessionLocal
 from sqlalchemy.orm import relationship
-from database import Base,engine,sessionmaker
-
 
 class Job(Base):
     __tablename__ = "jobs"
